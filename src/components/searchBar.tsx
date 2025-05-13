@@ -1,8 +1,32 @@
-import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { useDebounce } from "@hooks/useDebounce";
+'use client';
+import { useState } from "react";
 
-const SearchBar = () => {
-    const [searchQuery, setSearchQuery] = useState("");
-    const router = useRouter();
+type SearchBarProps = {
+    onSearch: (city: string) => void;
+};
+
+export default function SearchBar ({ onSearch }: SearchBarProps) {
+    const [city, setCity] = useState('');
+    const handleSubmit = (e: React.FormEvent) => { 
+        e.preventDefault();
+        if (city.trim()) {
+            onSearch(city.trim());
+            setCity('');
+        }
+    };
+    return (
+        <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full max-w-md mx-auto">
+            <input 
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                placeholder="Enter city name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button type="submit" 
+                className= "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Search
+                </button>
+        </form>
+    )
 };

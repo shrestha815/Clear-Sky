@@ -1,16 +1,22 @@
 //import Image from "next/image";
+'use client';
+import SearchBar from "@/components/searchBar";
 import React from "react";
 //import Link from "next/link";
 
 export default function Home() {
+  const handleCitySearch = (city: string) => {
+    console.log('You searched for:', city);
+    //replace stuff here with actual api stuff
+  };
+
   return (
     <div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1 className="text-3xl font-medium">Welcome To ClearSky</h1>
-        <p className="text-lg">
-          ClearSky is a weather app that provides accurate and up-to-date weather information for any location in the world. It is designed to be user-friendly and easy to navigate, making it accessible to everyone.
-        </p>
-        <h2 className="text-2xl font-medium">Currently being developed</h2>
+      <header className="pt-4">
+        <h1 className="text-2xl font-bold text-center">ClearSky</h1>
+      </header>
+      <main className="min-h-screen flex flex-col items-center justify-center p-4">
+        <SearchBar onSearch={handleCitySearch} />
       </main>
     </div>
   );
