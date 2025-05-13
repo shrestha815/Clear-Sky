@@ -1,6 +1,7 @@
 //import Image from "next/image";
 'use client';
 import SearchBar from "@/components/searchBar";
+import weatherCard from "@/components/weatherCard";
 import React from "react";
 //import Link from "next/link";
 
