@@ -1,7 +1,8 @@
 //import Image from "next/image";
 'use client';
 import SearchBar from "@/components/searchBar";
-import weatherCard from "@/components/weatherCard";
+import Navbar from "@/components/navbar";
+//import weatherCard from "@/components/weatherCard";
 import React from "react";
 //import Link from "next/link";
 
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <header className="pt-4">
-        <h1 className="text-2xl font-bold text-center">ClearSky</h1>
+        <Navbar />
       </header>
       <main className="min-h-screen flex flex-col items-center justify-center p-4">
         <SearchBar onSearch={handleCitySearch} />
