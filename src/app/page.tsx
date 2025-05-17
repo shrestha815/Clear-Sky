@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="pt-4">
+      <header>
         <Navbar />
       </header>
       <main className="min-h-screen flex flex-col items-center justify-center p-4">
