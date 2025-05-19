@@ -20,11 +20,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Clear Sky weather app
 
-To learn more about Next.js, take a look at the following resources:
+Clear Sky is a webapp that uses the Open Weather API for displaying relevant weather information of a location selected by the user.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- This build uses next js with typescript and tailwind css.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
