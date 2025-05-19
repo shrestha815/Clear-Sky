@@ -2,6 +2,7 @@ import React from 'react';
 import { IoMdHappy } from "react-icons/io";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type Props = {};
 
 export default function navbar({}: Props) {
@@ -15,6 +16,7 @@ export default function navbar({}: Props) {
         </div>
         {/*  */}
         <div className="absolute right-6 top-1/2 -translate-y-1/2 flex gap-2 items-center">
+            <p className="text-slate-300/80 text-sm">YourLocation</p>
             <FaLocationCrosshairs className="text-2xl text-gray-100 hover:opacity-80 cursor-pointer" />
         </div>
     </nav>
